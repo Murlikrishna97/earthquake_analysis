@@ -2,7 +2,6 @@ import folium
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import *
 
-
 def earthquake_classifier(input_value):
     if input_value is not None:
         try:
@@ -12,7 +11,7 @@ def earthquake_classifier(input_value):
         if input_value < 4.0:
             return "Low"
         elif 4.0 <= input_value < 6.0:
-            return "Medium"
+            return "Moderate"
         elif input_value >= 6.0:
             return "High"
         else:
